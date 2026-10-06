@@ -1,0 +1,45 @@
+# MTREEDeathPenalty - 1 heart = 2 health points.
+health:
+  starting-hearts: 10   # vanilla = 10 (20 HP)
+  minimum-hearts: 6     # max health never drops below this (12 HP)
+  maximum-hearts: 10    # max health never exceeds this (20 HP)
+
+recovery:
+  enabled: true
+  day-length-minutes: 20   # one Minecraft day in real minutes
+  first-death-days: 1      # days to recover 1 heart after a death
+  second-death-days: 2     # ...if you died again before recovering
+  third-death-days: 3      # ...third (or more) death in a row
+  maximum-days: 3          # hard cap on the delay
+
+penalties:
+  weakness:
+    enabled: true
+    duration-seconds: 300
+  mining-fatigue:
+    enabled: true
+    duration-seconds: 300
+  xp:
+    enabled: true
+    percentage: 10   # % of the XP the player has after respawning
+
+# Informational: heart TEXTURES cannot be changed by a server-side plugin.
+# See README.md ("Hardcore hearts") for the resource-pack method.
+hardcore-hearts:
+  enabled: true
+  mode: "best-available"
+
+messages:
+  death-header: "&c☠ You died."
+  death-health: "&c❤ Maximum health reduced by 1 heart. &7({hearts} hearts left)"
+  death-health-minimum: "&7❤ You are already at your minimum of &c{hearts} &7hearts."
+  death-weakness: "&7⚔ Weakness I — {duration}"
+  death-fatigue: "&7⛏ Mining Fatigue I — {duration}"
+  death-xp: "&7XP penalty — {percent}%"
+  recovery:
+    - "&6✦ Your wounds have healed."
+    - "&c❤ &f+1 Maximum Heart &7({hearts}/{max})"
+  prefix: "&8[&6MTREE&8] &7"
+  no-permission: "&cYou do not have permission."
+  player-not-found: "&cThat player is not online."
+  reloaded: "&aConfiguration reloaded."

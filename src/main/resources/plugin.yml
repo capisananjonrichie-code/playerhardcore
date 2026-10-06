@@ -1,0 +1,18 @@
+name: MTREEDeathPenalty
+version: '${project.version}'
+main: dev.mtree.deathpenalty.DeathPenaltyPlugin
+api-version: '1.21'
+description: Temporary max-health death penalty for the MTREE SMP.
+authors: [MTREE]
+commands:
+  deathpenalty:
+    description: MTREE death penalty commands
+    usage: /deathpenalty <reload|status|reset|heal|sethearts>
+    aliases: [dp]
+permissions:
+  deathpenalty.admin:
+    description: Use all /deathpenalty admin commands
+    default: op
+  deathpenalty.status:
+    description: View your own status
+    default: true
