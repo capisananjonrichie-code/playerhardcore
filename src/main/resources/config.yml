@@ -29,7 +29,7 @@ penalties:
 # 2) Leave resource-pack-url empty if you already set the pack in server.properties (do not use both).
 hardcore-hearts:
   enabled: true
-  resource-pack-url: ""
+  resource-pack-url: "https://cdn.modrinth.com/data/5AMcQaG0/versions/1Goz5CyI/Hardcore%20Hearts%20-%20v25.zip?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=minecraft"
   resource-pack-sha1: ""     # optional, 40 hex characters
   required: false            # true = players who decline are kicked from the pack prompt, keep false
   prompt: "&7MTREE uses Hardcore-style hearts."
