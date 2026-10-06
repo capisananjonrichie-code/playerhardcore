@@ -19,9 +19,6 @@ public final class DeathPenaltyPlugin extends JavaPlugin {
         getCommand("deathpenalty").setExecutor(cmd);
         getCommand("deathpenalty").setTabCompleter(cmd);
 
-        if (getConfig().getBoolean("hardcore-hearts.enabled", true)) {
-            getLogger().info("Hardcore heart look is done with a resource pack (see README); the plugin only manages max health.");
-        }
         // /reload safety: sync players who are already online
         for (Player p : Bukkit.getOnlinePlayers()) health.onJoin(p);
     }

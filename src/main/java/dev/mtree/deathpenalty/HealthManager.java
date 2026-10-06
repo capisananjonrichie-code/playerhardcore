@@ -70,6 +70,7 @@ final class HealthManager {
     // ---------------------------------------------------------------- events
 
     void onJoin(Player p) {
+        PackSender.send(plugin, p);
         UUID id = p.getUniqueId();
         if (!data.has(id)) return;           // never penalised: leave their health alone
         processRecovery(p, true);            // catch up on time spent offline

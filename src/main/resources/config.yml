@@ -23,11 +23,16 @@ penalties:
     enabled: true
     percentage: 10   # % of the XP the player has after respawning
 
-# Informational: heart TEXTURES cannot be changed by a server-side plugin.
-# See README.md ("Hardcore hearts") for the resource-pack method.
+# Hardcore-style hearts: the real HUD is kept, a resource pack swaps the heart textures.
+# Pack: https://modrinth.com/resourcepack/hardcore-hearts  (CC0)
+# 1) On that page click Download, right-click the file download button, "Copy link address", paste below.
+# 2) Leave resource-pack-url empty if you already set the pack in server.properties (do not use both).
 hardcore-hearts:
   enabled: true
-  mode: "best-available"
+  resource-pack-url: ""
+  resource-pack-sha1: ""     # optional, 40 hex characters
+  required: false            # true = players who decline are kicked from the pack prompt, keep false
+  prompt: "&7MTREE uses Hardcore-style hearts."
 
 messages:
   death-header: "&c☠ You died."
